@@ -25,6 +25,7 @@ setup(
     entry_points={
         'console_scripts': [
             'first_node = first_package.first_node:main',
+            'turtlesim_publisher = first_package.turtlesim_publisher:main',
             'turtlesim_subscriber = first_package.turtlesim_subscriber:main',
             'turtlesim_cmd_and_pose = first_package.turtlesim_cmd_and_pose:main',
         ],
