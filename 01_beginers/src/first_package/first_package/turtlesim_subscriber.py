@@ -5,7 +5,7 @@ from turtlesim.msg import Pose
 
 class TurtlesimSubscriber(Node):
     def __init__(self):
-        super().__init__('turtlesim subscriber')
+        super().__init__('turtlesim_subscriber')
         self.subscription = self.create_subscription(
             Pose,
             '/turtle1/pose',

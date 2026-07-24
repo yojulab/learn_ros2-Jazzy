@@ -29,6 +29,7 @@ setup(
             'turtlesim_subscriber = first_package.turtlesim_subscriber:main',
             'turtlesim_cmd_and_pose = first_package.turtlesim_cmd_and_pose:main',
             'first_service_server = first_package.first_service_server:main',
+            'turtlesim_service_server = first_package.turtlesim_service_server:main',
         ],
     },
 )
