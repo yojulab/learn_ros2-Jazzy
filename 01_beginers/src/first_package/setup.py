@@ -30,6 +30,7 @@ setup(
             'turtlesim_cmd_and_pose = first_package.turtlesim_cmd_and_pose:main',
             'first_service_server = first_package.first_service_server:main',
             'turtlesim_service_multispawns = first_package.turtlesim_service_multispawns:main',
+            'first_action_server = first_package.first_action_server:main',
         ],
     },
 )

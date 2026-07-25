@@ -7,6 +7,7 @@ find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/CmdAndPoseVel.msg"
   "srv/MultiSpawn.srv"
+  "action/MoveDistance.action"
 )
 
 ament_export_dependencies(rosidl_default_runtime)

@@ -1,0 +1,12 @@
+# Request
+float32 linear_x
+float32 angular_z
+float32 distance
+---
+# Result
+float32 position_x
+float32 position_theta
+float32 result_distance
+---
+# Feedback
+float32 remained_distance
