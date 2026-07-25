@@ -9,4 +9,4 @@ float32 position_theta
 float32 result_distance
 ---
 # Feedback
-float32 remained_distance
+float32 remaining_distance

@@ -1,3 +1,5 @@
+import time
+
 import rclpy
 from rclpy.action import ActionServer
 from rclpy.node import Node
@@ -16,8 +18,14 @@ class MoveDistanceActionServer(Node):
     def execute_callback(self, goal_handle):
         self.get_logger().info('Executing goal for MoveDistance action')
 
-        result = MoveDistance.Result()
+        feedback_msg = MoveDistance.Feedback()
+        for n in range(0, 10):
+            feedback_msg.remaining_distance = float(n)
+            goal_handle.publish_feedback(feedback_msg)
+            time.sleep(0.5)
+
         goal_handle.succeed()
+        result = MoveDistance.Result()
         return result
 
 
