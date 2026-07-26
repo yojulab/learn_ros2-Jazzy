@@ -33,6 +33,7 @@ setup(
             'first_action_server = first_package.first_action_server:main',
             'first_multi_thread = first_package.first_multi_thread:main',
             'turtlesim_action_server_multi_thread = first_package.turtlesim_action_server_multi_thread:main',
+            'turtlesim_parameters = first_package.turtlesim_parameters:main',
         ],
     },
 )

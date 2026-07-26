@@ -62,3 +62,20 @@ first_package_msgs/msg/CmdAndPoseVel
 ```bash
 ros2 action send_goal --feedback /dist_turtle first_package_msgs/action/MoveDistance "{linear_x: 0.8, angular_z: 0.4, distance: 2.0}"
 ```
+
+### parameter
+```bash
+ros2 param set /turtlesim background_r 290
+```
+### Run the new turtlesim_parameters action server
+```bash
+cd /home/sanghun-oh/ros-ws/learn_ros2-Jazzy/01_beginers
+colcon build
+source install/setup.bash
+ros2 run first_package turtlesim_parameters
+```
+
+### Send an action goal for turtlesim_parameters
+```bash
+ros2 action send_goal --feedback /dist_turtle first_package_msgs/action/MoveDistance "{linear_x: 0.8, angular_z: 0.4, distance: 2.0}"
+```
