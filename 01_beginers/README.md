@@ -58,3 +58,7 @@ first_package_msgs/msg/CmdAndPoseVel
 - `src/first_package/` - Main ROS2 package containing the first_node implementation
 - `src/first_package_msgs/` - Custom message package with CmdAndPoseVel message definition
 
+### action 
+```bash
+ros2 action send_goal --feedback /dist_turtle first_package_msgs/action/MoveDistance "{linear_x: 0.8, angular_z: 0.4, distance: 2.0}"
+```
