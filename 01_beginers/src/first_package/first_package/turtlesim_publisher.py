@@ -6,7 +6,9 @@ from geometry_msgs.msg import Twist
 class SimplePublisher(Node):
     def __init__(self):
         super().__init__('simple_publisher')
-        self.publisher_ = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
+        # self.publisher_ = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
+        # for launching with namespace, use the following topic name instead of '/turtle1/cmd_vel'
+        self.publisher_ = self.create_publisher(Twist, '/turtlesim/turtle1/cmd_vel', 10)
         self.timer_ = self.create_timer(0.1, self.publish_velocity)
 
     def publish_velocity(self):
