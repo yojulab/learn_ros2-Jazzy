@@ -56,21 +56,24 @@ class DistTurtleActionServer(Node):
         velocity_message.linear.x = goal_handle.request.linear_x
         velocity_message.angular.z = goal_handle.request.angular_z
 
-        while self.total_distance < goal_handle.request.distance:
-            self.total_distance += self.calculate_distance()
+        loop_period_seconds = 0.1
+        estimated_distance = 0.0
+
+        while estimated_distance < goal_handle.request.distance:
+            estimated_distance += abs(velocity_message.linear.x) * loop_period_seconds
             feedback_message.remaining_distance = max(
                 0.0,
-                goal_handle.request.distance - self.total_distance,
+                goal_handle.request.distance - estimated_distance,
             )
             goal_handle.publish_feedback(feedback_message)
             self.publisher.publish(velocity_message)
-            time.sleep(0.01)
+            time.sleep(loop_period_seconds)
 
         goal_handle.succeed()
         result = MoveDistance.Result()
         result.position_x = self.current_pose.x
         result.position_theta = self.current_pose.theta
-        result.result_distance = self.total_distance
+        result.result_distance = estimated_distance
         self.total_distance = 0.0
         self.is_first_pose = True
         return result

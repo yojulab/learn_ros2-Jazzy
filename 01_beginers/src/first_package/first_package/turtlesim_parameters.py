@@ -3,10 +3,10 @@ import time
 
 import rclpy
 from geometry_msgs.msg import Twist
+from rcl_interfaces.msg import ParameterDescriptor, SetParametersResult, FloatingPointRange
 from rclpy.action import ActionServer
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
-from rcl_interfaces.msg import SetParametersResult
 from turtlesim.msg import Pose
 
 from first_package.turtlesim_subscriber import TurtlesimSubscriber
@@ -36,8 +36,18 @@ class DistTurtleActionServer(Node):
             'dist_turtle',
             execute_callback=self.execute_callback,
         )
-        self.declare_parameter('quantile_time', 0.75)
-        self.declare_parameter('almost_goal_time', 0.95)
+
+        param_desc_quantile = ParameterDescriptor(
+            description='Quantile time parameter',
+            floating_point_range=[FloatingPointRange(from_value=0.0, to_value=1.0, step=0.01)],
+        )
+        self.declare_parameter('quantile_time', 0.75, param_desc_quantile)
+        param_desc_almost_goal = ParameterDescriptor(
+            description='Almost goal time parameter',
+            read_only=False,
+            dynamic_typing=True
+        )
+        self.declare_parameter('almost_goal_time', 0.95, param_desc_almost_goal)
         quantile_time_parameter, almost_goal_time_parameter = self.get_parameters(
             ['quantile_time', 'almost_goal_time']
         )
