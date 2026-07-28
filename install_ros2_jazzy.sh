@@ -25,6 +25,8 @@ echo "[3/5] ROS 2 Jazzy Desktop 및 Gazebo를 설치합니다 (시간이 다소 
 sudo apt update
 sudo apt install ros-jazzy-desktop -y
 sudo apt install ros-jazzy-ros-gz -y
+sudo apt install -y ros-jazzy-joint-state-publisher-gui
+
 
 # 4. 개발 도구 및 rosdep 설정
 echo "[4/5] 개발 툴 및 rosdep 초기화를 진행합니다..."
@@ -33,6 +35,7 @@ if [ ! -f /etc/ros/rosdep/sources.list.d/20-default.list ]; then
     sudo rosdep init
 fi
 rosdep update
+sudo apt install ros-jazzy-rqt-tf-tree 
 
 # 5. 환경 변수 등록 (.bashrc)
 echo "[5/5] 환경 변수를 .bashrc에 등록합니다..."

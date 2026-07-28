@@ -9,4 +9,5 @@ $ source install/setup.bash
 sanghun-oh@sanghun-oh-ROS2-Jazzy:~/ros-ws/learn_ros2-Jazzy/02_Intermediates$ ros2 launch 
 Display all 374 possibilities? (y or n)
 sanghun-oh@sanghun-oh-ROS2-Jazzy:~/ros-ws/learn_ros2-Jazzy/02_Intermediates$ ros2 launch pinky_description display.launch.xml
-```
+ros2 run tf2_tools view_frames
+``` 
