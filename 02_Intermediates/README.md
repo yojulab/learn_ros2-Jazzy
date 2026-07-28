@@ -10,4 +10,8 @@ sanghun-oh@sanghun-oh-ROS2-Jazzy:~/ros-ws/learn_ros2-Jazzy/02_Intermediates$ ros
 Display all 374 possibilities? (y or n)
 sanghun-oh@sanghun-oh-ROS2-Jazzy:~/ros-ws/learn_ros2-Jazzy/02_Intermediates$ ros2 launch pinky_description display.launch.xml
 ros2 run tf2_tools view_frames
+ros2 launch pinky_description display.launch.xml
+ros2 launch pinky_description rviz2_test.launch.xml
+ros2 launch pinky_gazebo launch_sim_empty.launch.xml
+ros2 launch pinky_gazebo launch_sim.launch.xml
 ``` 
