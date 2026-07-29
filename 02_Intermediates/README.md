@@ -6,12 +6,24 @@ gz sim building_robot.sdf
 ```bash
 https://github.com/PinkWink/pinky_for_edu
 $ source install/setup.bash 
-sanghun-oh@sanghun-oh-ROS2-Jazzy:~/ros-ws/learn_ros2-Jazzy/02_Intermediates$ ros2 launch 
-Display all 374 possibilities? (y or n)
-sanghun-oh@sanghun-oh-ROS2-Jazzy:~/ros-ws/learn_ros2-Jazzy/02_Intermediates$ ros2 launch pinky_description display.launch.xml
+ros2 launch pinky_description display.launch.xml
 ros2 run tf2_tools view_frames
 ros2 launch pinky_description display.launch.xml
 ros2 launch pinky_description rviz2_test.launch.xml
+
+```
+## simulation
+```bash
 ros2 launch pinky_gazebo launch_sim_empty.launch.xml
 ros2 launch pinky_gazebo launch_sim.launch.xml
+```
+
+## slam
+```bash
+rosdep update
+ros2 launch pinky_gazebo launch_sim.launch.xml
+ros2 launch pinky navigation map_building.launch.xml use_sim_time:=true
+ros2 launch pinky_navigation map_view.launch.xml
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+ros2 run nav2_map_server map_saver_cli-f<저장할 맵이름>
 ``` 
