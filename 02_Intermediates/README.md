@@ -46,3 +46,11 @@ ros2 launch pinky_navigation nav2_view.launch.xml
 ros2 launch pinky_simple_navigator simple_drive.launch.xml
 # and than choose SetGoal on Tool type on rivz2
 ```
+
+## apply hardware
+```bash
+sudo apt install ros-jazzy-usb-cam
+ros2 run usb_cam usb_cam_node_exe
+rqt # choose image view
+# setup 'export ROS_LOCALHOST_ONLY=1' with no DDS
+```

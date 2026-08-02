@@ -29,6 +29,12 @@ sudo apt install -y ros-jazzy-joint-state-publisher-gui
 sudo apt install -y ros-jazzy-slam-toolbox
 sudo apt install -y ros-jazzy-tf-transformations python3-transforms3d
 sudo apt install -y ros-jazzy-navigation2 ros-jazzy-nav2-bringup
+sudo apt install -y ros-jazzy-cv-bridge ros-jazzy-image-transport-plugins
+## MoveIt 설치
+sudo apt install ros-jazzy-moveit
+sudo apt install ros-jazzy-rmw-cyclonedds-cpp 
+# export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp 
+
 
 
 # 4. 개발 도구 및 rosdep 설정
