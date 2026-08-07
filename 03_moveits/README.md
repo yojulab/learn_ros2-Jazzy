@@ -7,7 +7,7 @@ ros2 launch my_robot_description display.launch.xml
 ros2 run tf2_tools view_frames
 ```
 ## 자동 충돌 설정
-- target : ls src/my_robot_description/urdf/my_robot.urdf.xacro
+- target : ls src/my_robot_description/urdf/my_robot_with_collision.urdf.xacro
 ```bash
 ros2 launch moveit_setup_assistant setup_assistant.launch.py
 ```
