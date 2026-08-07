@@ -23,6 +23,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 # 3. ROS 2 Desktop 및 Gazebo Harmonic 설치
 echo "[3/5] ROS 2 Jazzy Desktop 및 Gazebo를 설치합니다 (시간이 다소 소요됩니다)..."
 sudo apt update
+sudo apt install colcon -y
 sudo apt install ros-jazzy-desktop -y
 sudo apt install ros-jazzy-ros-gz -y
 sudo apt install -y ros-jazzy-joint-state-publisher-gui
