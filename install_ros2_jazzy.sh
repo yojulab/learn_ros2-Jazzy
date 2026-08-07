@@ -34,6 +34,8 @@ sudo apt install -y ros-jazzy-cv-bridge ros-jazzy-image-transport-plugins
 ## MoveIt 설치
 sudo apt install ros-jazzy-moveit -y
 sudo apt install ros-jazzy-rmw-cyclonedds-cpp -y
+sudo apt install ros-jazzy-controller-manager ros-jazzy-ros2-control ros-jazzy-ros2-controllers
+
 # export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp 
 
 

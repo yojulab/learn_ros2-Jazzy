@@ -14,3 +14,7 @@ ros2 run tf2_tools view_frames
 ```bash
 ros2 launch moveit_setup_assistant setup_assistant.launch.py
 ```
+## execute some launch
+```bash
+ros2 launch  my_robot_moveit_config demo.launch.py
+```
