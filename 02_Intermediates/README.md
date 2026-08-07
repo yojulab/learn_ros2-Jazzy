@@ -31,7 +31,7 @@ ros2 run tf2_ros tf2_echo odom base_link
 
 ## localization
 ```bash
-ros2 launch pinky_navigation localization_only_launch.xml map:=my_map.yaml
+ros2 launch pinky_navigation localization_only_launch.xml map:=src/pinky_for_edu/my_map.yaml
 ros2 launch pinky_navigation nav2_view.launch.xml # click 2D pose estimation on rviz2
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ros2 topic echo --once / amcl_pose
