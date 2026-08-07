@@ -31,8 +31,8 @@ sudo apt install -y ros-jazzy-tf-transformations python3-transforms3d
 sudo apt install -y ros-jazzy-navigation2 ros-jazzy-nav2-bringup
 sudo apt install -y ros-jazzy-cv-bridge ros-jazzy-image-transport-plugins
 ## MoveIt 설치
-sudo apt install ros-jazzy-moveit
-sudo apt install ros-jazzy-rmw-cyclonedds-cpp 
+sudo apt install ros-jazzy-moveit -y
+sudo apt install ros-jazzy-rmw-cyclonedds-cpp -y
 # export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp 
 
 
@@ -44,7 +44,7 @@ if [ ! -f /etc/ros/rosdep/sources.list.d/20-default.list ]; then
     sudo rosdep init
 fi
 rosdep update
-sudo apt install ros-jazzy-rqt-tf-tree 
+sudo apt install ros-jazzy-rqt-tf-tree -y
 
 # 5. 환경 변수 등록 (.bashrc)
 echo "[5/5] 환경 변수를 .bashrc에 등록합니다..."
